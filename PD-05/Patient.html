@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title>CoronaTest</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://www.augenklinik.nl/fileadmin/_processed_/4/d/csm_ICON_Corona-Virus_7adfd31c25.png"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./CoronaStyle.css">
+    <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
+    <script src="./CoronaTest.js"></script>
+</head>
+
+<body>
+ <div class="bg-img">
+  <div class="container">
+    <div class="topnav">
+      <a href="#home">Laten Testen</a>
+      <a href="patient.html">Patient worden</a>
+      <a href="#contact">Home</a>
+    </div>
+  </div>
+</div>
+	 <div class="CoronaHeader">
+                            <h1><center>Testen op het coronavirus (COVID-19)</center></h1>
+     </div>
+
+<div class="container_patient">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <h3>Maak een patient aan:</h3>
+                <label for="patienName">Naam:</label>
+                <input type="text" id="patientName" name="patientName"><br><br>
+				<label for="patientAge">Leeftijd:</label>
+                <input type="number" id="patientAge" name="patientAge"><br><br>
+				<label for="hasFever">Koorts:</label>
+				<input type="checkbox" id="hasFever"checked="checked" /><br><br>
+                <button value="patientName,patientAge,hasFever" type="button" onClick='createPatient()'>Maak nu aan</button> 
+              </div>
+</body>
+</html>
