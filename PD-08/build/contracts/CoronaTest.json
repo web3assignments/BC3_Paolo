@@ -1,0 +1,1520 @@
+{
+  "contractName": "CoronaTest",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "patientName",
+              "type": "string"
+            },
+            {
+              "internalType": "bool",
+              "name": "hasFever",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint256",
+              "name": "patientAge",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Patient",
+          "name": "_patient",
+          "type": "tuple"
+        }
+      ],
+      "name": "coronaTest",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "result",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.0+commit.9e61f92b\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"patientName\",\"type\":\"string\"},{\"internalType\":\"bool\",\"name\":\"hasFever\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"patientAge\",\"type\":\"uint256\"}],\"internalType\":\"struct Patient\",\"name\":\"_patient\",\"type\":\"tuple\"}],\"name\":\"coronaTest\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"result\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/Daddy/TruffleTest/contracts/CoronaTest.sol\":\"CoronaTest\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Daddy/TruffleTest/contracts/CoronaTest.sol\":{\"keccak256\":\"0x4069a50b4048c7c4b89b72f165ee0bfb66e40c503a286ff7194d5d1811eeda77\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://71d4d29a6cde0e723fda963c72732208a771fd08a0b484fc6815904eae7a7610\",\"dweb:/ipfs/QmYtP5Bg6dbuXJPjTTJfjtpoZYj9VbAUbxpCTDEU31xMQX\"]},\"/C/Users/Daddy/TruffleTest/contracts/Patient.sol\":{\"keccak256\":\"0x5316fc1120cba49c3905d3163d73d58e9febe617cd0f6b244b2d1ebf2b3b90e9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7cbe54ad80bf568cc5cf170cb9bef85952217f2345ad67e42c95e1ec6254b9ac\",\"dweb:/ipfs/QmQwM8tgre8yMaa7kPw1NxEKZUyLHfeB6S36Rd12jzFkQi\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061049c806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c80634e8e398914610030575b600080fd5b61004a6004803603810190610045919061021e565b610060565b6040516100579190610325565b60405180910390f35b600060405160200161007190610310565b60405160208183030381529060405280519060200120826000015160405160200161009c91906102f9565b6040516020818303038152906040528051906020012014156100f3576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016100ea90610340565b60405180910390fd5b601282604001511015801561011057506001151582602001511515145b1561011e5760019050610123565b600090505b919050565b60008135905061013781610438565b92915050565b600082601f83011261014e57600080fd5b813561016161015c8261038d565b610360565b9150808252602083016020830185838301111561017d57600080fd5b6101888382846103f6565b50505092915050565b6000606082840312156101a357600080fd5b6101ad6060610360565b9050600082013567ffffffffffffffff8111156101c957600080fd5b6101d58482850161013d565b60008301525060206101e984828501610128565b60208301525060406101fd84828501610209565b60408301525092915050565b6000813590506102188161044f565b92915050565b60006020828403121561023057600080fd5b600082013567ffffffffffffffff81111561024a57600080fd5b61025684828501610191565b91505092915050565b610268816103e0565b82525050565b6000610279826103b9565b61028381856103d5565b9350610293818560208601610405565b80840191505092915050565b60006102ac6011836103c4565b91507f50617469656e74206e6f7420666f756e640000000000000000000000000000006000830152602082019050919050565b60006102ec6000836103d5565b9150600082019050919050565b6000610305828461026e565b915081905092915050565b600061031b826102df565b9150819050919050565b600060208201905061033a600083018461025f565b92915050565b600060208201905081810360008301526103598161029f565b9050919050565b6000604051905081810181811067ffffffffffffffff8211171561038357600080fd5b8060405250919050565b600067ffffffffffffffff8211156103a457600080fd5b601f19601f8301169050602081019050919050565b600081519050919050565b600082825260208201905092915050565b600081905092915050565b60008115159050919050565b6000819050919050565b82818337600083830152505050565b60005b83811015610423578082015181840152602081019050610408565b83811115610432576000848401525b50505050565b610441816103e0565b811461044c57600080fd5b50565b610458816103ec565b811461046357600080fd5b5056fea264697066735822122006d0491d814d8c22b489973e62adc33e01d204a7f966c934405564f32b495a1664736f6c63430007000033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c80634e8e398914610030575b600080fd5b61004a6004803603810190610045919061021e565b610060565b6040516100579190610325565b60405180910390f35b600060405160200161007190610310565b60405160208183030381529060405280519060200120826000015160405160200161009c91906102f9565b6040516020818303038152906040528051906020012014156100f3576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016100ea90610340565b60405180910390fd5b601282604001511015801561011057506001151582602001511515145b1561011e5760019050610123565b600090505b919050565b60008135905061013781610438565b92915050565b600082601f83011261014e57600080fd5b813561016161015c8261038d565b610360565b9150808252602083016020830185838301111561017d57600080fd5b6101888382846103f6565b50505092915050565b6000606082840312156101a357600080fd5b6101ad6060610360565b9050600082013567ffffffffffffffff8111156101c957600080fd5b6101d58482850161013d565b60008301525060206101e984828501610128565b60208301525060406101fd84828501610209565b60408301525092915050565b6000813590506102188161044f565b92915050565b60006020828403121561023057600080fd5b600082013567ffffffffffffffff81111561024a57600080fd5b61025684828501610191565b91505092915050565b610268816103e0565b82525050565b6000610279826103b9565b61028381856103d5565b9350610293818560208601610405565b80840191505092915050565b60006102ac6011836103c4565b91507f50617469656e74206e6f7420666f756e640000000000000000000000000000006000830152602082019050919050565b60006102ec6000836103d5565b9150600082019050919050565b6000610305828461026e565b915081905092915050565b600061031b826102df565b9150819050919050565b600060208201905061033a600083018461025f565b92915050565b600060208201905081810360008301526103598161029f565b9050919050565b6000604051905081810181811067ffffffffffffffff8211171561038357600080fd5b8060405250919050565b600067ffffffffffffffff8211156103a457600080fd5b601f19601f8301169050602081019050919050565b600081519050919050565b600082825260208201905092915050565b600081905092915050565b60008115159050919050565b6000819050919050565b82818337600083830152505050565b60005b83811015610423578082015181840152602081019050610408565b83811115610432576000848401525b50505050565b610441816103e0565b811461044c57600080fd5b50565b610458816103ec565b811461046357600080fd5b5056fea264697066735822122006d0491d814d8c22b489973e62adc33e01d204a7f966c934405564f32b495a1664736f6c63430007000033",
+  "immutableReferences": {},
+  "sourceMap": "115:415:0:-:0;;;146:17;;;;;;;;;;115:415;;;;;;",
+  "deployedSourceMap": "115:415:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;173:355;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;;239:11;330:20;;;;;;;:::i;:::-;;;;;;;;;;;;;320:31;;;;;;294:8;:20;;;277:38;;;;;;;;:::i;:::-;;;;;;;;;;;;;267:49;;;;;;:84;;259:114;;;;;;;;;;;;:::i;:::-;;;;;;;;;410:2;387:8;:19;;;:25;;:54;;;;;437:4;416:25;;:8;:17;;;:25;;;387:54;383:139;;;464:4;457:11;;;;383:139;506:5;499:12;;173:355;;;;:::o;5:124:-1:-;;82:6;69:20;60:29;;94:30;118:5;94:30;:::i;:::-;54:75;;;;:::o;137:442::-;;239:3;232:4;224:6;220:17;216:27;206:2;;257:1;254;247:12;206:2;294:6;281:20;316:65;331:49;373:6;331:49;:::i;:::-;316:65;:::i;:::-;307:74;;401:6;394:5;387:21;437:4;429:6;425:17;470:4;463:5;459:16;505:3;496:6;491:3;487:16;484:25;481:2;;;522:1;519;512:12;481:2;532:41;566:6;561:3;556;532:41;:::i;:::-;199:380;;;;;;;:::o;608:719::-;;720:4;708:9;703:3;699:19;695:30;692:2;;;738:1;735;728:12;692:2;756:20;771:4;756:20;:::i;:::-;747:29;;861:1;850:9;846:17;833:31;884:18;876:6;873:30;870:2;;;916:1;913;906:12;870:2;951:59;1006:3;997:6;986:9;982:22;951:59;:::i;:::-;944:4;937:5;933:16;926:85;786:236;1076:2;1109:46;1151:3;1142:6;1131:9;1127:22;1109:46;:::i;:::-;1102:4;1095:5;1091:16;1084:72;1032:135;1223:2;1256:49;1301:3;1292:6;1281:9;1277:22;1256:49;:::i;:::-;1249:4;1242:5;1238:16;1231:75;1177:140;686:641;;;;:::o;1334:130::-;;1414:6;1401:20;1392:29;;1426:33;1453:5;1426:33;:::i;:::-;1386:78;;;;:::o;1471:373::-;;1598:2;1586:9;1577:7;1573:23;1569:32;1566:2;;;1614:1;1611;1604:12;1566:2;1677:1;1666:9;1662:17;1649:31;1700:18;1692:6;1689:30;1686:2;;;1732:1;1729;1722:12;1686:2;1752:76;1820:7;1811:6;1800:9;1796:22;1752:76;:::i;:::-;1742:86;;1628:206;1560:284;;;;:::o;1851:104::-;1928:21;1943:5;1928:21;:::i;:::-;1923:3;1916:34;1910:45;;:::o;1962:360::-;;2092:39;2125:5;2092:39;:::i;:::-;2143:89;2225:6;2220:3;2143:89;:::i;:::-;2136:96;;2237:52;2282:6;2277:3;2270:4;2263:5;2259:16;2237:52;:::i;:::-;2310:6;2305:3;2301:16;2294:23;;2072:250;;;;;:::o;2330:317::-;;2490:67;2554:2;2549:3;2490:67;:::i;:::-;2483:74;;2590:19;2586:1;2581:3;2577:11;2570:40;2638:2;2633:3;2629:12;2622:19;;2476:171;;;:::o;2656:298::-;;2834:84;2916:1;2911:3;2834:84;:::i;:::-;2827:91;;2946:1;2941:3;2937:11;2930:18;;2820:134;;;:::o;2962:275::-;;3117:95;3208:3;3199:6;3117:95;:::i;:::-;3110:102;;3229:3;3222:10;;3098:139;;;;:::o;3244:381::-;;3452:148;3596:3;3452:148;:::i;:::-;3445:155;;3617:3;3610:10;;3433:192;;;:::o;3632:210::-;;3753:2;3742:9;3738:18;3730:26;;3767:65;3829:1;3818:9;3814:17;3805:6;3767:65;:::i;:::-;3724:118;;;;:::o;3849:416::-;;4049:2;4038:9;4034:18;4026:26;;4099:9;4093:4;4089:20;4085:1;4074:9;4070:17;4063:47;4124:131;4250:4;4124:131;:::i;:::-;4116:139;;4020:245;;;:::o;4272:256::-;;4334:2;4328:9;4318:19;;4372:4;4364:6;4360:17;4471:6;4459:10;4456:22;4435:18;4423:10;4420:34;4417:62;4414:2;;;4492:1;4489;4482:12;4414:2;4512:10;4508:2;4501:22;4312:216;;;;:::o;4535:322::-;;4679:18;4671:6;4668:30;4665:2;;;4711:1;4708;4701:12;4665:2;4778:4;4774:9;4767:4;4759:6;4755:17;4751:33;4743:41;;4842:4;4836;4832:15;4824:23;;4602:255;;;:::o;4864:122::-;;4958:5;4952:12;4942:22;;4923:63;;;:::o;4994:163::-;;5109:6;5104:3;5097:19;5146:4;5141:3;5137:14;5122:29;;5090:67;;;;:::o;5166:145::-;;5302:3;5287:18;;5280:31;;;;:::o;5319:85::-;;5392:5;5385:13;5378:21;5367:32;;5361:43;;;:::o;5411:72::-;;5473:5;5462:16;;5456:27;;;:::o;5491:145::-;5572:6;5567:3;5562;5549:30;5628:1;5619:6;5614:3;5610:16;5603:27;5542:94;;;:::o;5645:268::-;5710:1;5717:101;5731:6;5728:1;5725:13;5717:101;;;5807:1;5802:3;5798:11;5792:18;5788:1;5783:3;5779:11;5772:39;5753:2;5750:1;5746:10;5741:15;;5717:101;;;5833:6;5830:1;5827:13;5824:2;;;5898:1;5889:6;5884:3;5880:16;5873:27;5824:2;5694:219;;;;:::o;5921:111::-;5987:21;6002:5;5987:21;:::i;:::-;5980:5;5977:32;5967:2;;6023:1;6020;6013:12;5967:2;5961:71;:::o;6039:117::-;6108:24;6126:5;6108:24;:::i;:::-;6101:5;6098:35;6088:2;;6147:1;6144;6137:12;6088:2;6082:74;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.7.0;\npragma experimental ABIEncoderV2;\n\nimport './Patient.sol';\n\ncontract CoronaTest {\n    \n    constructor () {}\n    \n    function coronaTest(Patient memory _patient) public pure returns (bool result){\n      require(keccak256(abi.encodePacked(_patient.patientName)) != keccak256(abi.encodePacked('')), \"Patient not found\");\n        if (_patient.patientAge >= 18 && _patient.hasFever == true) {\n            return true;\n        } else {\n            return false;\n        }\n    }\n}",
+  "sourcePath": "C:\\Users\\Daddy\\TruffleTest\\contracts\\CoronaTest.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Daddy/TruffleTest/contracts/CoronaTest.sol",
+    "exportedSymbols": {
+      "CoronaTest": [
+        50
+      ]
+    },
+    "id": 51,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:0"
+      },
+      {
+        "id": 2,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "55:33:0"
+      },
+      {
+        "absolutePath": "/C/Users/Daddy/TruffleTest/contracts/Patient.sol",
+        "file": "./Patient.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 51,
+        "sourceUnit": 93,
+        "src": "90:23:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 50,
+        "linearizedBaseContracts": [
+          50
+        ],
+        "name": "CoronaTest",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 6,
+              "nodeType": "Block",
+              "src": "161:2:0",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 7,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 4,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "158:2:0"
+            },
+            "returnParameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "161:0:0"
+            },
+            "scope": 50,
+            "src": "146:17:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 48,
+              "nodeType": "Block",
+              "src": "251:277:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        "id": 28,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "expression": {
+                                    "argumentTypes": null,
+                                    "id": 18,
+                                    "name": "_patient",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 9,
+                                    "src": "294:8:0",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_struct$_Patient_$92_memory_ptr",
+                                      "typeString": "struct Patient memory"
+                                    }
+                                  },
+                                  "id": 19,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "memberName": "patientName",
+                                  "nodeType": "MemberAccess",
+                                  "referencedDeclaration": 87,
+                                  "src": "294:20:0",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_string_memory_ptr",
+                                    "typeString": "string memory"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_string_memory_ptr",
+                                    "typeString": "string memory"
+                                  }
+                                ],
+                                "expression": {
+                                  "argumentTypes": null,
+                                  "id": 16,
+                                  "name": "abi",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": -1,
+                                  "src": "277:3:0",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_magic_abi",
+                                    "typeString": "abi"
+                                  }
+                                },
+                                "id": 17,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "memberName": "encodePacked",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": null,
+                                "src": "277:16:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_abiencodepacked_pure$__$returns$_t_bytes_memory_ptr_$",
+                                  "typeString": "function () pure returns (bytes memory)"
+                                }
+                              },
+                              "id": 20,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "277:38:0",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            ],
+                            "id": 15,
+                            "name": "keccak256",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -8,
+                            "src": "267:9:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                              "typeString": "function (bytes memory) pure returns (bytes32)"
+                            }
+                          },
+                          "id": 21,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "267:49:0",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "hexValue": "",
+                                  "id": 25,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "string",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "347:2:0",
+                                  "subdenomination": null,
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+                                    "typeString": "literal_string \"\""
+                                  },
+                                  "value": ""
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+                                    "typeString": "literal_string \"\""
+                                  }
+                                ],
+                                "expression": {
+                                  "argumentTypes": null,
+                                  "id": 23,
+                                  "name": "abi",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": -1,
+                                  "src": "330:3:0",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_magic_abi",
+                                    "typeString": "abi"
+                                  }
+                                },
+                                "id": 24,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "memberName": "encodePacked",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": null,
+                                "src": "330:16:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_abiencodepacked_pure$__$returns$_t_bytes_memory_ptr_$",
+                                  "typeString": "function () pure returns (bytes memory)"
+                                }
+                              },
+                              "id": 26,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "330:20:0",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            ],
+                            "id": 22,
+                            "name": "keccak256",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -8,
+                            "src": "320:9:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                              "typeString": "function (bytes memory) pure returns (bytes32)"
+                            }
+                          },
+                          "id": 27,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "320:31:0",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        },
+                        "src": "267:84:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "50617469656e74206e6f7420666f756e64",
+                        "id": 29,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "353:19:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_79ce62d7220f73dea0dc2c9bb95d6143420225d311d28b04d8fae31c4aacf571",
+                          "typeString": "literal_string \"Patient not found\""
+                        },
+                        "value": "Patient not found"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_79ce62d7220f73dea0dc2c9bb95d6143420225d311d28b04d8fae31c4aacf571",
+                          "typeString": "literal_string \"Patient not found\""
+                        }
+                      ],
+                      "id": 14,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "259:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 30,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "259:114:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 31,
+                  "nodeType": "ExpressionStatement",
+                  "src": "259:114:0"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "id": 40,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 35,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 32,
+                          "name": "_patient",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 9,
+                          "src": "387:8:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Patient_$92_memory_ptr",
+                            "typeString": "struct Patient memory"
+                          }
+                        },
+                        "id": 33,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "patientAge",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 91,
+                        "src": "387:19:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": ">=",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "3138",
+                        "id": 34,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "410:2:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_18_by_1",
+                          "typeString": "int_const 18"
+                        },
+                        "value": "18"
+                      },
+                      "src": "387:25:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "&&",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "id": 39,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 36,
+                          "name": "_patient",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 9,
+                          "src": "416:8:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Patient_$92_memory_ptr",
+                            "typeString": "struct Patient memory"
+                          }
+                        },
+                        "id": 37,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "hasFever",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 89,
+                        "src": "416:17:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "==",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "74727565",
+                        "id": 38,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "bool",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "437:4:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "value": "true"
+                      },
+                      "src": "416:25:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "387:54:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "id": 46,
+                    "nodeType": "Block",
+                    "src": "485:37:0",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "66616c7365",
+                          "id": 44,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "506:5:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "false"
+                        },
+                        "functionReturnParameters": 13,
+                        "id": 45,
+                        "nodeType": "Return",
+                        "src": "499:12:0"
+                      }
+                    ]
+                  },
+                  "id": 47,
+                  "nodeType": "IfStatement",
+                  "src": "383:139:0",
+                  "trueBody": {
+                    "id": 43,
+                    "nodeType": "Block",
+                    "src": "443:36:0",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "74727565",
+                          "id": 41,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "464:4:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "true"
+                        },
+                        "functionReturnParameters": 13,
+                        "id": 42,
+                        "nodeType": "Return",
+                        "src": "457:11:0"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "4e8e3989",
+            "id": 49,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "coronaTest",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9,
+                  "mutability": "mutable",
+                  "name": "_patient",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 49,
+                  "src": "193:23:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Patient_$92_memory_ptr",
+                    "typeString": "struct Patient"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 8,
+                    "name": "Patient",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 92,
+                    "src": "193:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Patient_$92_storage_ptr",
+                      "typeString": "struct Patient"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "192:25:0"
+            },
+            "returnParameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12,
+                  "mutability": "mutable",
+                  "name": "result",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 49,
+                  "src": "239:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "239:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "238:13:0"
+            },
+            "scope": 50,
+            "src": "173:355:0",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 51,
+        "src": "115:415:0"
+      }
+    ],
+    "src": "32:498:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/Daddy/TruffleTest/contracts/CoronaTest.sol",
+    "exportedSymbols": {
+      "CoronaTest": [
+        50
+      ]
+    },
+    "id": 51,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:0"
+      },
+      {
+        "id": 2,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "55:33:0"
+      },
+      {
+        "absolutePath": "/C/Users/Daddy/TruffleTest/contracts/Patient.sol",
+        "file": "./Patient.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 51,
+        "sourceUnit": 93,
+        "src": "90:23:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 50,
+        "linearizedBaseContracts": [
+          50
+        ],
+        "name": "CoronaTest",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 6,
+              "nodeType": "Block",
+              "src": "161:2:0",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 7,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 4,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "158:2:0"
+            },
+            "returnParameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "161:0:0"
+            },
+            "scope": 50,
+            "src": "146:17:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 48,
+              "nodeType": "Block",
+              "src": "251:277:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        "id": 28,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "expression": {
+                                    "argumentTypes": null,
+                                    "id": 18,
+                                    "name": "_patient",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 9,
+                                    "src": "294:8:0",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_struct$_Patient_$92_memory_ptr",
+                                      "typeString": "struct Patient memory"
+                                    }
+                                  },
+                                  "id": 19,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "memberName": "patientName",
+                                  "nodeType": "MemberAccess",
+                                  "referencedDeclaration": 87,
+                                  "src": "294:20:0",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_string_memory_ptr",
+                                    "typeString": "string memory"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_string_memory_ptr",
+                                    "typeString": "string memory"
+                                  }
+                                ],
+                                "expression": {
+                                  "argumentTypes": null,
+                                  "id": 16,
+                                  "name": "abi",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": -1,
+                                  "src": "277:3:0",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_magic_abi",
+                                    "typeString": "abi"
+                                  }
+                                },
+                                "id": 17,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "memberName": "encodePacked",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": null,
+                                "src": "277:16:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_abiencodepacked_pure$__$returns$_t_bytes_memory_ptr_$",
+                                  "typeString": "function () pure returns (bytes memory)"
+                                }
+                              },
+                              "id": 20,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "277:38:0",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            ],
+                            "id": 15,
+                            "name": "keccak256",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -8,
+                            "src": "267:9:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                              "typeString": "function (bytes memory) pure returns (bytes32)"
+                            }
+                          },
+                          "id": 21,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "267:49:0",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "hexValue": "",
+                                  "id": 25,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "string",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "347:2:0",
+                                  "subdenomination": null,
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+                                    "typeString": "literal_string \"\""
+                                  },
+                                  "value": ""
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+                                    "typeString": "literal_string \"\""
+                                  }
+                                ],
+                                "expression": {
+                                  "argumentTypes": null,
+                                  "id": 23,
+                                  "name": "abi",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": -1,
+                                  "src": "330:3:0",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_magic_abi",
+                                    "typeString": "abi"
+                                  }
+                                },
+                                "id": 24,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "memberName": "encodePacked",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": null,
+                                "src": "330:16:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_abiencodepacked_pure$__$returns$_t_bytes_memory_ptr_$",
+                                  "typeString": "function () pure returns (bytes memory)"
+                                }
+                              },
+                              "id": 26,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "330:20:0",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            ],
+                            "id": 22,
+                            "name": "keccak256",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -8,
+                            "src": "320:9:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                              "typeString": "function (bytes memory) pure returns (bytes32)"
+                            }
+                          },
+                          "id": 27,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "320:31:0",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        },
+                        "src": "267:84:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "50617469656e74206e6f7420666f756e64",
+                        "id": 29,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "353:19:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_79ce62d7220f73dea0dc2c9bb95d6143420225d311d28b04d8fae31c4aacf571",
+                          "typeString": "literal_string \"Patient not found\""
+                        },
+                        "value": "Patient not found"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_79ce62d7220f73dea0dc2c9bb95d6143420225d311d28b04d8fae31c4aacf571",
+                          "typeString": "literal_string \"Patient not found\""
+                        }
+                      ],
+                      "id": 14,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "259:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 30,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "259:114:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 31,
+                  "nodeType": "ExpressionStatement",
+                  "src": "259:114:0"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "id": 40,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 35,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 32,
+                          "name": "_patient",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 9,
+                          "src": "387:8:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Patient_$92_memory_ptr",
+                            "typeString": "struct Patient memory"
+                          }
+                        },
+                        "id": 33,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "patientAge",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 91,
+                        "src": "387:19:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": ">=",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "3138",
+                        "id": 34,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "410:2:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_18_by_1",
+                          "typeString": "int_const 18"
+                        },
+                        "value": "18"
+                      },
+                      "src": "387:25:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "&&",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "id": 39,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 36,
+                          "name": "_patient",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 9,
+                          "src": "416:8:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Patient_$92_memory_ptr",
+                            "typeString": "struct Patient memory"
+                          }
+                        },
+                        "id": 37,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "hasFever",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 89,
+                        "src": "416:17:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "==",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "74727565",
+                        "id": 38,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "bool",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "437:4:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "value": "true"
+                      },
+                      "src": "416:25:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "387:54:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "id": 46,
+                    "nodeType": "Block",
+                    "src": "485:37:0",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "66616c7365",
+                          "id": 44,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "506:5:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "false"
+                        },
+                        "functionReturnParameters": 13,
+                        "id": 45,
+                        "nodeType": "Return",
+                        "src": "499:12:0"
+                      }
+                    ]
+                  },
+                  "id": 47,
+                  "nodeType": "IfStatement",
+                  "src": "383:139:0",
+                  "trueBody": {
+                    "id": 43,
+                    "nodeType": "Block",
+                    "src": "443:36:0",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "74727565",
+                          "id": 41,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "464:4:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "true"
+                        },
+                        "functionReturnParameters": 13,
+                        "id": 42,
+                        "nodeType": "Return",
+                        "src": "457:11:0"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "4e8e3989",
+            "id": 49,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "coronaTest",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9,
+                  "mutability": "mutable",
+                  "name": "_patient",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 49,
+                  "src": "193:23:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Patient_$92_memory_ptr",
+                    "typeString": "struct Patient"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 8,
+                    "name": "Patient",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 92,
+                    "src": "193:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Patient_$92_storage_ptr",
+                      "typeString": "struct Patient"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "192:25:0"
+            },
+            "returnParameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12,
+                  "mutability": "mutable",
+                  "name": "result",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 49,
+                  "src": "239:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "239:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "238:13:0"
+            },
+            "scope": 50,
+            "src": "173:355:0",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 51,
+        "src": "115:415:0"
+      }
+    ],
+    "src": "32:498:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.0+commit.9e61f92b.Emscripten.clang"
+  },
+  "networks": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0xfd286076E16D51D9D33E699b30b74e636754DDba",
+      "transactionHash": "0x731622d656402b2ba0f83e3f44f3f3997e3624437c55bb6f1b1202b70ad04b57"
+    }
+  },
+  "schemaVersion": "3.3.2",
+  "updatedAt": "2020-12-17T21:25:15.097Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

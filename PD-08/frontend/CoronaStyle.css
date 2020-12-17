@@ -1,0 +1,66 @@
+.CoronaHeader{
+ background: #006FBA;
+    position: center;
+    width: 100%;
+	height:60px
+ }
+  
+.container_patient{
+padding-left: 20px}
+
+.bg-img {
+  /* The image used */
+  background-image: url("https://www.ggdhaaglanden.nl/upload/268f47f2-42e6-48b0-aea3-bece11d3dcbc_image-template_HP_Corona2020.PNG");
+
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+/* Position the navbar container inside the image */
+.container {
+  position: absolute;
+  margin: 20px;
+  width: auto;
+  right: 30px;
+}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+  background-color: white;
+}
+
+/* Navbar links */
+.topnav a {
+  float: right;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #006FBA;
+  color: black;
+}
+
+ h1{
+    display: block;
+    font-size: 2em;
+	color: white;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+	width: 100%;
+}
+
