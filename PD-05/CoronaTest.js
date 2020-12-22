@@ -1,9 +1,10 @@
-contract_address ="0xFCD530FDf6D77BD7D070152b414dA01104E5DAbe";
+contract_address = "0x6fa2fbCE2B12513D78F3Dbb821362cD42cA3a8F4";
 const abi = [
 	{
 		"inputs": [],
-		"stateMutability": "nonpayable",
-		"type": "constructor"
+		"stateMutability": "payable",
+		"type": "constructor",
+		"payable": true
 	},
 	{
 		"anonymous": false,
@@ -56,6 +57,34 @@ const abi = [
 		"type": "event"
 	},
 	{
+		"inputs": [],
+		"name": "infectedNumber",
+		"outputs": [
+			{
+				"internalType": "bytes",
+				"name": "",
+				"type": "bytes"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function",
+		"constant": true
+	},
+	{
+		"inputs": [],
+		"name": "priceOfUrl",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function",
+		"constant": true
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "string",
@@ -80,32 +109,9 @@ const abi = [
 	},
 	{
 		"inputs": [],
-		"name": "getPatient",
-		"outputs": [
-			{
-				"components": [
-					{
-						"internalType": "string",
-						"name": "patientName",
-						"type": "string"
-					},
-					{
-						"internalType": "bool",
-						"name": "hasFever",
-						"type": "bool"
-					},
-					{
-						"internalType": "uint256",
-						"name": "patientAge",
-						"type": "uint256"
-					}
-				],
-				"internalType": "struct Patient",
-				"name": "",
-				"type": "tuple"
-			}
-		],
-		"stateMutability": "view",
+		"name": "testPatient",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -136,14 +142,136 @@ const abi = [
 			}
 		],
 		"stateMutability": "view",
+		"type": "function",
+		"constant": true
+	},
+	{
+		"inputs": [],
+		"name": "getPatient",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "patientName",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "hasFever",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "patientAge",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Patient",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function",
+		"constant": true
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "string",
+				"name": "result",
+				"type": "string"
+			}
+		],
+		"name": "__callback",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "_myid",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "string",
+				"name": "_result",
+				"type": "string"
+			},
+			{
+				"internalType": "bytes",
+				"name": "_proof",
+				"type": "bytes"
+			}
+		],
+		"name": "__callback",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
 		"inputs": [],
-		"name": "testPatient",
+		"name": "getInfectedNumber",
+		"outputs": [
+			{
+				"internalType": "bytes",
+				"name": "",
+				"type": "bytes"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function",
+		"constant": true
+	},
+	{
+		"inputs": [],
+		"name": "getInfected",
 		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
+		"stateMutability": "payable",
+		"type": "function",
+		"payable": true
+	},
+	{
+		"inputs": [],
+		"name": "getInfectedNumberUint",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function",
+		"constant": true
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes",
+				"name": "input",
+				"type": "bytes"
+			}
+		],
+		"name": "convertToUint",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "pure",
+		"type": "function",
+		"constant": true
 	}
 ];
 
@@ -152,22 +280,40 @@ var accounts;
 
 // Function from web3examples. responsible for loading the provider.
 async function asyncloaded() {
-    web3 = new Web3(Web3.givenProvider); // provider from metamask      
-    var result = await web3.eth.requestAccounts().catch(x => console.log(x.message));
-    console.log(`web3 is present: ${web3.version}`); // note: use ` (back quote)
-    const network = await web3.eth.net.getId().catch((reason) => console.log(`Cannnot find network ${reason}`));
-    if (typeof network === 'undefined' || network != 4) { console.log("Please select Rinkeby test network"); return; }
-    console.log("Ethereum network: Rinkeby")
-    accounts = await web3.eth.getAccounts();
-    console.log(accounts[0]); // show current user.
-    contract = new web3.eth.Contract(abi, contract_address);
+	web3 = new Web3(Web3.givenProvider); // provider from metamask      
+	var result = await web3.eth.requestAccounts().catch(x => console.log(x.message));
+	console.log(`web3 is present: ${web3.version}`); // note: use ` (back quote)
+	const network = await web3.eth.net.getId().catch((reason) => console.log(`Cannnot find network ${reason}`));
+	if (typeof network === 'undefined' || network != 4) { console.log("Please select Rinkeby test network"); return; }
+	console.log("Ethereum network: Rinkeby")
+	accounts = await web3.eth.getAccounts();
+	console.log(accounts[0]); // show current user.
+	contract = new web3.eth.Contract(abi, contract_address);
 }
-window.addEventListener('load', asyncloaded);       
+window.addEventListener('load', asyncloaded);
 
 // Contract functions:
-function createPatient() {
-    var patientName = document.getElementById('patientName').value;
+async function createPatient() {
+	var patientName = document.getElementById('patientName').value;
 	var hasFever = document.getElementById('hasFever').value;
 	var patientAge = document.getElementById('patientAge').value;
-    contract.methods.createPatient(patientName,patientAge,hasFever).send({from: accounts[0]}).then(x => console.log(x));
+	var result = await contract.methods.createPatient(patientName, patientAge, hasFever).send({ from: accounts[0] }).then(x => { console.log(x); return x });
+	console.log(result);
+	document.getElementById('newPatient').innerText = 'Uw Patient ID is: ' + result.events.newPatient.returnValues[0];
+	console.log('New Patient created with id: ' + result.events.newPatient.returnValues[0]);
+	console.log('New Patient created with address: ' + result.events.newPatient.returnValues[3]);
+}
+//testen oracle PD8
+async function getInfected() {
+	contract.methods.getInfected().send({ from: accounts[0] }).then(x => { console.log(x); return x });
+}
+async function getInfectedNumber() {
+	var infectedNumber = await contract.methods.getInfectedNumber().call().then(x => { console.log(x); return x });
+}
+
+async function getInfectedNumberUint() {
+	var getInfectedNumberUint = await contract.methods.getInfectedNumberUint().call().then(x => { console.log(x); return x });
+	var infectedNumber = await contract.methods.getInfectedNumber().call().then(x => { console.log(x); return x });
+	document.getElementById('OracleCorona').innerText = infectedNumber;
+	document.getElementById('getInfectedNumberUint').innerText = getInfectedNumberUint;
 }
