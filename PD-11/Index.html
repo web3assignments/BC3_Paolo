@@ -1,0 +1,44 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./Corona_styl.css">
+    <script src="https://unpkg.com/ipfs-api@9.0.0/dist/index.js"></script>
+	<script src="https://bundle.run/buffer@5.2.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ipfs-http-client/dist/index.min.js" 
+    integrity="sha384-z1h61oSlN7CqPJi0KRu/HDcXbKvyXaq0zZp/uDlHBpSwB6y6xXnnM1FvNzGPsBFI" 
+    crossorigin="anonymous"></script>
+	
+	
+    <script src="./Corona.js"></script>
+</head>
+
+<body> 
+    <h1 class="h1-class" id="h1-id"><center>Covid-19 Image Uploader</center></h1>
+	<pre id="log" style="width:100%;height:100px"></pre>
+    <img id="myImage"></img>
+           <div id="imageUploadForm" class="col-sm-4">
+                <form action="/">
+                    <fieldset>
+                        <legend>Upload Covid-19 Image</legend>
+                        <input type="file" name="image" id="image">
+                        </br>
+						</br>
+                        <button type="button"  onclick="uploadImage()">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div id="getImage" class="col-sm-4">
+                <legend>Get Covid-19 Image</legend>
+                <p>Paste IPFS-Covid-19 Hash here: <input id='imageHashId' type='text'></p>
+                <button type="button" onclick="getImage()">Get Image</button>
+            </div>
+            <div id="getHash" class="col-sm-4">
+                <legend>Get Image Hash</legend>
+                <button type="button" onclick="getHash()">Get Hash</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
