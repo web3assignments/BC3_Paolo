@@ -1,56 +1,65 @@
-// SPDX-License-Identifier: MIT
-pragma solidity 0.7.0;
+pragma solidity >=0.4.22 <0.8.0;
 pragma experimental ABIEncoderV2;
+import "remix_accounts.sol";
+import "remix_tests.sol"; // this import is automatically injected by Remix.
+import "../TestStreet.sol";
 
-import './Patient.sol';
-import './CoronaTest.sol';
+// File name has to end with '_test.sol', this file can contain more than one testSuite contracts
+contract testSuite {
 
-contract TestStreet {
+    TestStreet test;
+    address owner;
+    address acc0;
+  
     
-    event newPatient(uint id, string name, bool hasFever, address _address);
-    event testResult(bool hasCorona, string name);
-    mapping (address => Patient) addressToPatient;
-    mapping(uint => address) patientToOwner; 
-    mapping (address => uint) patientLookup;
-    Patient[] patients;
-    CoronaTest CT;
-    address public owner;
-      
-    constructor () {
-    CT = new CoronaTest();
-     owner = msg.sender;
-    }
- 
-   function createPatient(string memory _patientName, int _patientAge, bool _hasFever) public {
-   require(_patientAge >= 0, "invalid Age"); 
-   patients.push(Patient(_patientName, _hasFever, _patientAge ));
-   uint id = patients.length -1;
-   patientToOwner[id] = msg.sender;
-   emit newPatient(id, _patientName, _hasFever, msg.sender);
-}
-
-   function testPatient() public {
-    Patient memory p = getPatient();
-     testPatient(p);
-    }
-
-   function testPatient(Patient memory _patient) internal returns (bool result) {
-      require((patients.length > 0), "No patient available for lookup.");
-        emit testResult(CT.coronaTest(_patient), _patient.patientName);
-        return CT.coronaTest(_patient);
+    function beforeAll() public {
+        
+        test = new TestStreet();
+         owner = address(this);
     }
     
-     function getPatients() view public returns(Patient[] memory) {
-       require((patients.length > 0), "No patients available for lookup.");
-        return patients;
+ function createPatientFailure() public {
+        
+     try test.createPatient("Paolo",-25,false)
+        {
+            Assert.ok(false, "" );
+        } catch Error(string memory reason) {
+            Assert.equal(reason,"invalid Age", "is failed ");
+        }
+        
     }
     
-  function getPatient() public view returns (Patient memory) {
-        require((patients.length > 0), "No patient available for lookup."); 
-        return patients[patientLookup[msg.sender]];
+    function getZeroPatients() public {
+    
+     try test.getPatients()
+        {
+            Assert.ok(false, "" );
+        } catch Error(string memory reason ) {
+            Assert.equal(reason,"No patients available for lookup.", "is failed ");
+        }
     }
     
-    function getOwner() public view returns (address) {
-        return owner;
+    function checkSuccessCreatedPatient() public {
+        
+        try test.createPatient("Paolo",25,false)
+        {
+            Assert.ok(true, "" );
+        } catch {Assert.ok(false, "Patient not created");}
+        
+    }
+    
+/// #sender: account-1
+    function getPatient() public {
+     
+       try test.getPatient()
+        {
+            Assert.ok(true, "" );
+        } catch Error(string memory reason) {
+            Assert.ok(false, reason);
+        }
+    }
+    
+    function testInitialOwnerIsNotAcc0() public {
+         Assert.notEqual(test.getOwner(), acc0, "Owner should not be acc0");
     }
 }
