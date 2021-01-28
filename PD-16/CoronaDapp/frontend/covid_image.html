@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./CoronaStyle.css">
+    <script src="https://unpkg.com/ipfs-api@9.0.0/dist/index.js"></script>
+    <script src="https://bundle.run/buffer@5.2.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ipfs-http-client/dist/index.min.js"
+        integrity="sha384-z1h61oSlN7CqPJi0KRu/HDcXbKvyXaq0zZp/uDlHBpSwB6y6xXnnM1FvNzGPsBFI"
+        crossorigin="anonymous"></script>
+
+
+    <script src="./image_upload.js"></script>
+</head>
+
+<body>
+    <div class="bg-img">
+        <div class="container">
+            <div class="topnav">
+                <a href="covid_image.html">Image uploader</a>
+                <a href="#Testen">Laten Testen</a>
+                <a href="patient.html">Patient worden</a>
+                <a href="index.html">Home</a>
+            </div>
+        </div>
+    </div>
+    <div class="CoronaHeader">
+        <h1>
+            <center>COVID-19 Image uploader</center>
+        </h1>
+    </div>
+
+
+    <pre id="log" style="width:100%;height:100px"></pre>
+    <img id="myImage"></img>
+    <div id="imageUploadForm" class="col-sm-4">
+        <form action="/">
+            <fieldset>
+                <legend>Upload Covid-19 Image</legend>
+                <input type="file" name="image" id="image">
+                </br>
+                </br>
+                <button type="button" onclick="uploadImage()">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+    <div id="getImage" class="col-sm-4">
+        <legend>Get Covid-19 Image</legend>
+        <p>Paste IPFS-Covid-19 Hash here: <input id='imageHashId' type='text'></p>
+        <button type="button" onclick="getImage()">Get Image</button>
+    </div>
+    <div id="getHash" class="col-sm-4">
+        <legend>Get Image Hash</legend>
+        <button type="button" onclick="getHash()">Get Hash</button>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>

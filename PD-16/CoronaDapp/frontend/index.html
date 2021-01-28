@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+  <title>CoronaTest</title>
+  <link rel="shortcut icon" type="image/jpg"
+    href="https://www.augenklinik.nl/fileadmin/_processed_/4/d/csm_ICON_Corona-Virus_7adfd31c25.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./CoronaStyle.css">
+  <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
+  <script src="./CoronaTest.js"></script>
+</head>
+
+<body>
+  <div class="bg-img">
+    <div class="container">
+      <div class="topnav">
+        <a href="covid_image.html">Image uploader</a>
+        <a href="#Testen">Laten Testen</a>
+        <a href="patient.html">Patient worden</a>
+        <a href="index.html">Home</a>
+      </div>
+    </div>
+  </div>
+  <div class="CoronaHeader">
+    <h1>
+      <center>Testen op het coronavirus (COVID-19)</center>
+    </h1>
+  </div>
+
+  <h3>Oracle Test Buttons(see the console log for more details).</h3>
+  <button type="button" onClick="getInfected()">Call Oracle</button>
+  <p id="OracleCorona"></p>
+  <button type="button" onClick="getInfectedNumberUint()">Get Result</button>
+  <p id="getInfectedNumberUint"></p>
+</body>
+
+</html>
